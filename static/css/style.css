@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.author-credit {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 12px 24px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.author-credit i {
+  font-size: 20px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.container {
+  width: 100%;
+  max-width: 550px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.icon-wrapper i {
+  font-size: 40px;
+  color: white;
+}
+
+h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.prediction-form {
+  margin-bottom: 25px;
+}
+
+.input-group {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-predict {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5), 0 0 20px rgba(118, 75, 162, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-predict:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, #7c8ff0 0%, #8a5bb8 100%);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.7), 0 0 30px rgba(118, 75, 162, 0.5);
+}
+
+.btn-predict:active {
+  transform: translateY(-1px) scale(1);
+}
+
+.btn-predict i {
+  font-size: 18px;
+}
+
+.result {
+  background: rgba(72, 187, 120, 0.2);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(72, 187, 120, 0.2);
+  border: 2px solid rgba(72, 187, 120, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.result i {
+  font-size: 24px;
+}
+
+.result p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.species-info {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.species-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.species-badge.setosa {
+  background: rgba(240, 147, 251, 0.2);
+  color: #f093fb;
+  border: 1px solid rgba(240, 147, 251, 0.5);
+}
+
+.species-badge.versicolor {
+  background: rgba(79, 172, 254, 0.2);
+  color: #4facfe;
+  border: 1px solid rgba(79, 172, 254, 0.5);
+}
+
+.species-badge.virginica {
+  background: rgba(67, 233, 123, 0.2);
+  color: #43e97b;
+  border: 1px solid rgba(67, 233, 123, 0.5);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0;
+  }
+  
+  .card {
+    padding: 25px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  .author-credit {
+    top: 10px;
+    right: 10px;
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
